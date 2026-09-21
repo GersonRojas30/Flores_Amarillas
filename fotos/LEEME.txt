@@ -1,0 +1,3 @@
+foto1, foto2 y foto3 son tus fotos. Los marcos 4, 5 y 6 muestran GIF de Tenor (ver EXTERNAS en script.js).
+Para guardar un GIF dentro del proyecto, descárgalo y nómbralo foto4.gif, foto5.gif o foto6.gif en esta carpeta.
+Formatos: .jpg, .png, .webp o .gif

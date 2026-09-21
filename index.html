@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flores amarillas para ti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400;1,600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="mini" class="mini" aria-label="Mini reproductor">
+    <div class="mini-video"><div id="youtube"></div></div>
+    <p id="titulo-cancion" class="cancion"></p>
+  </div>
+  <div id="controles" class="controles">
+    <button id="btn-play" class="btn-play" type="button" aria-label="Reproducir música">▶</button>
+    <input id="volumen" type="range" min="0" max="100" value="35" aria-label="Volumen">
+  </div>
+
+  <!-- PANTALLA 1: ENTRADA -->
+  <section id="entrada" class="pantalla">
+    <form id="form" autocomplete="off">
+      <p class="fecha">Feliz inicio de la primaveraaa</p>
+      <h1 class="pregunta">Ingrese el nombre del amor de mi vida</h1>
+      <input id="nombre" type="text" placeholder="Escribe su nombre" aria-label="Nombre"
+             autocapitalize="off" autocomplete="off" spellcheck="false">
+      <button type="submit" class="entrar">Entrar</button>
+      <p id="error" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- PANTALLA 2: FLORES -->
+  <main id="pantalla-flores" class="escena" hidden>
+
+    <!-- ✏️ EDITA AQUÍ TU MENSAJE -->
+    <section class="texto">
+      <p class="fecha">Feliz inicio de la primavera, mor ❤️</p>
+      <h1>Para Denis, el amor de mi vida</h1>
+      <p class="mensaje">
+        Denis, te amo muchísimo. Eres el amor de mi vida, y no pasa un solo día
+        sin que lo piense. Quería darte estas flores amarillas con mis propias
+        manos, me da pena y verguenza no poder entregártelas en persona ni en físico.
+        Perdóname por eso. Hice este ramo con todo el cariño que tengo, para que
+        al menos algo mío llegue hasta ti y te acompañe hoy.
+      </p>
+      <p class="mensaje">
+        Sé que esperarme no es fácil y que mi situación pesa a veces. Por eso te
+        pido, desde el corazón, que no te canses de mí ni de lo que estamos
+        pasando. Es una etapa, no el final de nada, y contigo a mi lado se hace
+        mucho más llevadera. Te prometo que voy a recompensarte por cada día que
+        has esperado: voy a darte todo lo que te mereces, y más.
+      </p>
+      <p class="mensaje">
+        Y sí, quiero casarme contigo. Quiero construir juntos la vida que te
+        mereces y despertar a tu lado. Hoy empieza la primavera, y ojalá también
+        empiece para nosotros una etapa donde todo florezca.
+      </p>
+      <p class="mensaje">
+        Espero que te guste este pequeño detalle. Gracias por esperarme y por
+        quedarte a mi lado.
+      </p>
+      <p class="firma">Con todo mi amor,<br>Aldair</p>
+      <p class="pista">Puedes interacturar con las flores mi amorrrrrr.</p>
+    </section>
+
+    <div class="ramo">
+      <svg id="ramo" viewBox="0 0 400 520" role="img" aria-label="Ramo de flores amarillas">
+        <defs>
+          <linearGradient id="p1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd23f"/><stop offset="1" stop-color="#f0a500"/></linearGradient>
+          <linearGradient id="p2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0a0"/><stop offset="1" stop-color="#ffc21a"/></linearGradient>
+          <linearGradient id="p3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff8c8"/><stop offset="1" stop-color="#ffd84d"/></linearGradient>
+          <radialGradient id="c"><stop offset="0" stop-color="#4a2107"/><stop offset=".7" stop-color="#7a3f10"/><stop offset="1" stop-color="#a8641c"/></radialGradient>
+          <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fbf73"/><stop offset="1" stop-color="#2f7d4a"/></linearGradient>
+          <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f9a5b"/><stop offset="1" stop-color="#1f5c3a"/></linearGradient>
+          <linearGradient id="kraft" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e8cb9c"/><stop offset=".5" stop-color="#d3ae7c"/><stop offset="1" stop-color="#e8cb9c"/></linearGradient>
+          <linearGradient id="rosa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7b6c6"/><stop offset="1" stop-color="#e88aa5"/></linearGradient>
+          <linearGradient id="cinta" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8fb0"/><stop offset="1" stop-color="#d94a72"/></linearGradient>
+          <linearGradient id="oro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff0a0"/><stop offset="1" stop-color="#e8a800"/></linearGradient>
+
+          <path id="pet" d="M0 -8 C 9 -16 10 -38 0 -52 C -10 -38 -9 -16 0 -8Z"/>
+          <path id="vena" d="M0 -12 Q.6 -30 0 -46" fill="none" stroke="#fff8c9" stroke-opacity=".55" stroke-width=".9" stroke-linecap="round"/>
+          <g id="hoja"><path d="M0 0 C 15 -14 17 -42 0 -68 C -17 -42 -15 -14 0 0Z"/><path d="M0 -4 L0 -58" stroke="#c9efb8" stroke-opacity=".45" stroke-width="1.2" fill="none"/></g>
+          <path id="estrella" d="M0 -11 Q1.6 -1.6 11 0 Q1.6 1.6 0 11 Q-1.6 1.6 -11 0 Q-1.6 -1.6 0 -11Z" fill="#fffbe0"/>
+          <path id="corazon" d="M0 5 C -9 -1 -6 -8 0 -3.5 C 6 -8 9 -1 0 5Z"/>
+          <g id="lazo">
+            <path d="M200 402 C 172 370 120 378 127 405 C 133 430 174 426 200 402Z" fill="url(#cinta)"/>
+            <path d="M196 402 C 172 384 142 388 144 404 C 147 418 176 416 196 402Z" fill="#ffb3c8" opacity=".55"/>
+          </g>
+          <path id="cola" d="M197 411 C 185 432 176 450 166 470 L177 466 L182 478 C 190 456 200 436 206 414Z" fill="url(#cinta)"/>
+        </defs>
+
+        <g id="tallos"></g>
+        <g id="relleno"></g>
+        <g id="hojas"></g>
+
+        <!-- Papel rosa, papel kraft y lazo -->
+        <path d="M84 342 Q130 318 200 336 Q270 318 316 342 L222 506 L178 506Z" fill="url(#rosa)"/>
+        <path d="M98 348 Q150 328 200 344 Q250 328 302 348 L216 510 L184 510Z" fill="url(#kraft)"/>
+        <path d="M200 344 L216 510 L184 510Z" fill="#b98f5c" opacity=".35"/>
+        <path d="M120 362 L188 500" stroke="#fff3d6" stroke-opacity=".35" stroke-width="2" fill="none"/>
+        <path d="M106 353 Q152 336 200 350 Q248 336 294 353" fill="none" stroke="#fff3d6" stroke-width="1.4" stroke-dasharray="4 4" opacity=".85"/>
+        <use href="#cola"/>
+        <use href="#cola" transform="translate(400 0) scale(-1 1)"/>
+        <path d="M131 392 Q200 402 269 392 L266 411 Q200 421 134 411Z" fill="url(#cinta)"/>
+        <path d="M134 396 Q200 406 266 396" fill="none" stroke="#ffc2d4" stroke-opacity=".6" stroke-width="1.2"/>
+        <use href="#lazo"/>
+        <use href="#lazo" transform="translate(400 0) scale(-1 1)"/>
+        <circle cx="200" cy="404" r="9" fill="#c9405f"/>
+        <ellipse cx="197" cy="401" rx="4" ry="2.4" fill="#fff" opacity=".4"/>
+        <path d="M200 412 L200 436" stroke="#e8b640" stroke-width="1"/>
+        <use href="#corazon" transform="translate(200 444) scale(1.7)" fill="url(#oro)" stroke="#b97a00" stroke-width=".4"/>
+
+        <g id="flores"></g>
+        <g id="brillos"></g>
+      </svg>
+    </div>
+
+    <!-- Collage de fotos -->
+    <section id="galeria" class="galeria" aria-label="Fotos de nosotros">
+      <div class="lado izq"></div>
+      <div class="lado der"></div>
+      <div class="base"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
